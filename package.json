@@ -1,0 +1,40 @@
+{
+  "name": "pi-sailresearch-custom-provider",
+  "version": "0.1.0",
+  "description": "Sail Research provider for pi, with ASAP and Balanced service tiers",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "sailresearch",
+    "sail-research"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d34dh0r53/pi-sailresearch-custom-provider.git"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "test:live": "SAIL_LIVE_TEST=1 node --test test/live.test.ts",
+    "check": "tsc -p tsconfig.json && npm test"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "1.5.2",
+    "@earendil-works/pi-coding-agent": "1.5.2",
+    "@types/node": "22.19.19",
+    "typescript": "5.9.3"
+  }
+}
